@@ -1,8 +1,8 @@
 import pandas as pd
 
-pd.set_option('display.max_columns', None)   # mostra todas as colunas
-pd.set_option('display.width', None)         # evita quebra de linha
-pd.set_option('display.max_colwidth', None)  # mostra conteúdo completo
+pd.set_option('display.max_columns', None)   
+pd.set_option('display.width', None)        
+pd.set_option('display.max_colwidth', None)  
 
 ITENS_PATH = "/home/vinicius/Downloads/microdados_enem_2024/DADOS/ITENS_PROVA_2024.csv"
 
@@ -37,6 +37,6 @@ prova_certa = prova_certa[
     prova_certa['CO_POSICAO'].isin([139, 140, 149, 165])
 ]
 
-#1408 e a prova certa para ser estudada
+#1408 e a prova certa para ser estudada a amarela
 
 print(prova_certa[['CO_POSICAO', 'CO_ITEM', 'CO_PROVA']])
