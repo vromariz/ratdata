@@ -22,7 +22,7 @@ df = pd.read_csv(
 # filtro do estado
 
 df = df[
-    df["SG_UF_PROVA"] == "PI"
+    df["SG_UF_PROVA"] == "TO"
 ].copy()
 
 print("Quantidade:", len(df))
@@ -30,35 +30,39 @@ print("Quantidade:", len(df))
 # editar esse filtro das provas para pegar todas 1407-1418
 
 mapa_provas = {
-    "AZUL": 1407,
-    "AMARELA": 1408,
-    "VERDE": 1409,
-    "CINZA": 1410,
-    #"VERDE2": 1411,
-    #"VERDE3": 1412,
-    #"LARANJA": 1413,
-    #"LARANJA2": 1414,
-    #"ROXA": 1415,
-    #"ROXA2": 1416,
-    #"ROXA3": 1417,
-    #"LEITOR TELA": 1418
+    # "AZUL": 1407,
+    # "AMARELA": 1408,
+    # "VERDE": 1409,
+    # "CINZA": 1410,
+    
+    # "VERDE2": 1411,
+    # "VERDE3": 1412,
+    # "LARANJA": 1413,
+    # "LARANJA2": 1414,
+    
+    "ROXA": 1415,
+    "ROXA2": 1416,
+    "ROXA3": 1417,
+    "LEITOR TELA": 1418
 }
 
 # posicao editar que é o mais errado, olhar no excel
 
 itens_por_cor = {
-    "AZUL": [138, 169, 180, 165],
-    "AMARELA": [165, 149, 139, 140],
-    "VERDE": [156, 171, 164, 174],
-    "CINZA": [148, 149, 141, 151],
-    #"VERDE2": [156, 171, 164, 174],
-    #"VERDE3": [156, 171, 164, 174],
-    #"LARANJA": [156, 171, 164, 174],
-    #"LARANJA2": [156, 171, 164, 174],
-    #"ROXA": [156, 171, 164, 174],
-    #"ROXA2": [156, 171, 164, 174],
-    #"ROXA3": [156, 171, 164, 174],
-    #"LEITOR TELA": [156, 171, 164, 174]
+    # "AZUL": [138, 169, 180, 165],
+    # "AMARELA": [165, 149, 139, 140],
+    # "VERDE": [156, 171, 164, 174],
+    # "CINZA": [148, 149, 141, 151],
+    
+    # "VERDE2": [156, 171, 164, 174],
+    # "VERDE3": [156, 171, 164, 174],
+    # "LARANJA": [156, 171, 164, 174],
+    # "LARANJA2": [156, 171, 164, 174],
+    
+    "ROXA": [156, 171, 164, 174],
+    "ROXA2": [156, 171, 164, 174],
+    "ROXA3": [156, 171, 164, 174],
+    "LEITOR TELA": [156, 171, 164, 174]
 }
 
 # posicao 136 -> índice 0
@@ -145,7 +149,7 @@ df_final = pd.DataFrame(resultado)
 print("\nRESULTADO FINAL\n")
 print(df_final)
 
-saida = "/home/vinicius/Downloads/resultado_mt_pi4.csv"
+saida = "/home/vinicius/Downloads/resultado_mt_to.csv"
 
 df_final.to_csv(
     saida,

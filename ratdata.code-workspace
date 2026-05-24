@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "ratdata",
+			"path": "."
+		},
+		{
+			"name": "DADOS",
+			"path": "../../../Downloads/microdados_enem_2024/DADOS"
+		}
+	],
+	"settings": {}
+}
